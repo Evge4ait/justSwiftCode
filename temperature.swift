@@ -1,23 +1,25 @@
-let userName = "User"
+let userName = "User" // Вводится имя пользователя
 let city = "Omsk" // научиться выводить текст из массива
-let temperature = -273
+let temperature = -273 // температура
 
-let welcomeText = "Welcome, \(userName)!"
-print(welcomeText)
+let welcomeText = "Welcome, \(userName)!" // Пишем текст приветствия
+print(welcomeText) // Выводим текс приветсвия
 
 let massiveCity: [String] = ["Unknown location","Omsk", "Moscow", "Saint Petersburg", "Myrmansk", "Kazan", "Samara", "Nizhny Novgorod", "Volgograd", "Yekaterinburg", "Chelyabinsk", "Tomsk", "Novosibirsk", "Krasnodar", "Ulyanovsk", "Yaroslavl", "Kogasayevsk", "Astrakhan", "Rostov-on-Don", "Samara"]
+// небольшой массив с названием городов
+print (massiveCity[0]) // проверка работоспособности массива
 
-print (massiveCity[0])
+let tVeryHot = 35 // очень горячая
+let tHot = 25  //горячая
+let tWarm = 15 //теплая
+let tNormal = 0 //нулевая
+let tCold = -10 // холодно
+let tVeryCold = -20 // очень холодно
+let tVeryVeryCold = -30 // ооочень холодно
 
-let tVeryHot = 35
-let tHot = 25
-let tWarm = 15
-let tNormal = 0
-let tCold = -10
-let tVeryCold = -20
-let tVeryVeryCold = -30
+let temp = temperature // меняем название что бы проще печатать
 
-let temp = temperature
+//далее прогон по температуре
 
 if temp > tHot && temp < tVeryHot {
     print ("it is very hot today \(temperature)°C")
@@ -35,4 +37,6 @@ if temp > tHot && temp < tVeryHot {
     print( "Unknown temperature \(temperature)°C")
 }
 
-
+// добавить солнечно или темно
+// добавить ветренно или штиль
+// основываясь на этом сделать рекомендацию по выбору одежды
