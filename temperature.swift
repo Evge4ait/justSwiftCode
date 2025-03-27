@@ -12,8 +12,6 @@ var massiveCity: [String] = ["unknown location","Omsk", "Moscow", "Saint Petersb
 
 print (massiveCity[0])
 
-
-
 let tVeryHot = 35
 let tHot = 25
 let tWarm = 15
@@ -22,18 +20,20 @@ let tCold = -10
 let tVeryCold = -20
 let tVeryVeryCold = -30
 
-let t = temperature
+let temp = temperature
 
-if t > tHot && t < tVeryHot {
+if temp > tHot && t < tVeryHot {
     print ("it is very hot today \(temperature)°C")
-} else if t > tWarm && t < tHot {
+} else if temp > tWarm && temp < tHot {
     print ("it is warm today \(temperature)°C")
-} else if t > tNormal && t < tWarm {
+} else if temp > tNormal && temp < tWarm {
     print ("it is cold today \(temperature)°C")
-} else if t > tCold && t < tNormal {
+} else if temp > tCold && temp < tNormal {
     print( "it is very cold today \(temperature)°C")
-} else if t > tVeryCold && t < tVeryVeryCold {
+} else if temp > tVeryCold && temp < tVeryVeryCold {
     print( "it is very very cold today \(temperature)°C")
-} else if t > tVeryHot || t < tVeryVeryCold {
+} else if temp > tVeryHot || temp < tVeryVeryCold {
     print( "Warring abnormal temperature \(temperature)°C")
 }
+
+
