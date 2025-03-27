@@ -1,14 +1,11 @@
 let userName = "User"
 let city = "Omsk" // научиться выводить текст из массива
-let temperature = -40
+let temperature = -273
 
-
-
-let name = userName
-let welcomeText = "Welcome, \(name)!"
+let welcomeText = "Welcome, \(userName)!"
 print(welcomeText)
 
-var massiveCity: [String] = ["unknown location","Omsk", "Moscow", "Saint Petersburg", "Myrmansk", "Kazan", "Samara", "Nizhny Novgorod", "Volgograd", "Yekaterinburg", "Chelyabinsk", "Tomsk", "Novosibirsk", "Krasnodar", "Ulyanovsk", "Yaroslavl", "Kogasayevsk", "Astrakhan", "Rostov-on-Don", "Samara"]
+let massiveCity: [String] = ["Unknown location","Omsk", "Moscow", "Saint Petersburg", "Myrmansk", "Kazan", "Samara", "Nizhny Novgorod", "Volgograd", "Yekaterinburg", "Chelyabinsk", "Tomsk", "Novosibirsk", "Krasnodar", "Ulyanovsk", "Yaroslavl", "Kogasayevsk", "Astrakhan", "Rostov-on-Don", "Samara"]
 
 print (massiveCity[0])
 
@@ -34,6 +31,8 @@ if temp > tHot && temp < tVeryHot {
     print( "it is very very cold today \(temperature)°C")
 } else if temp > tVeryHot || temp < tVeryVeryCold {
     print( "Warring abnormal temperature \(temperature)°C")
+} else {
+    print( "Unknown temperature \(temperature)°C")
 }
 
 
