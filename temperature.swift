@@ -22,7 +22,7 @@ let tVeryVeryCold = -30
 
 let temp = temperature
 
-if temp > tHot && t < tVeryHot {
+if temp > tHot && temp < tVeryHot {
     print ("it is very hot today \(temperature)°C")
 } else if temp > tWarm && temp < tHot {
     print ("it is warm today \(temperature)°C")
