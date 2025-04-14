@@ -1,69 +1,44 @@
 // hello world 2.04.25
 
-struct Weather {
+struct WeatherInfo {
+    
     let temperature: Int  // температура
     let city: String  // город
     var time: String  // время
-    let weatherCondition: String  // погодные условия
+    let condition: WeatherCondition  // погодные условия
     let humidity: Double  // влажность
     let windSpeed: Double    // ветер
-    var timeOfDay: String   // время суток
-    
-    
-    // инициализатор
-    init (temperature: Int,
-          city: String,
-          time: String,
-          weatherCondition: String,
-          humidity: Double,
-          windSpeed: Double)
-    {
-        self.temperature = temperature
-        self.city = city
-        self.time = time
-        self.weatherCondition = weatherCondition
-        self.humidity = humidity
-        self.windSpeed = windSpeed
-        
+
+    var timeOfDay: String {  // время суток
         if time >= "06:00" && time < "18:00" {
-            self.timeOfDay = "Day"
+            return "Day"
         } else {
-            self.timeOfDay = "Night"
+            return "Night"
         }
     }
+    
+    func description() -> String {
+     return "Погода в \(city) в \(time) (\(timeOfDay)): \(temperature)°C, \(condition.rawValue), влажность \(humidity)%, ветер \(windSpeed) м/с."
+        }
 }
 
-var currentWeather = Weather(
+enum WeatherCondition: String {
+    case sunny = "Sunny"
+    case cloudy = "Cloudy"
+    case rainy = "Rainy"
+    case snowy = "Snowy"
+    
+}
+
+var currentWeatherData = WeatherInfo(
     temperature: 25,
     city: "New York",
     time: "19:30",
-    weatherCondition: "Sunny",
+    condition: .sunny,
     humidity: 70.0,
     windSpeed: 4.0)
 
-
 // test
-print("Current temperature in \(currentWeather.city) is \(currentWeather.temperature)°C")
-print("Time: \(currentWeather.time) \(currentWeather.timeOfDay)")
-print("Weather condition: \(currentWeather.weatherCondition)")
-print("Humidity: \(currentWeather.humidity)%")
-print("Wind speed: \(currentWeather.windSpeed) m/s")
-
-// switch temperature {
-// case 0...10: print("Сool outside \(temperature)º!")
-// case 11...20: print("It's quite pleasant outside \(temperature)º.")
-// case 21...25: print("It's a hot outside \(temperature)º.")
-// case 26...30: print("It's quite warm outside \(temperature)º.")
-// case 31...40: print("It's quite hot outside \(temperature)º.")
-// case 41...max(temperature, 373): print("It's very hot outside \(temperature)º.")
-// default: print("It's unknown outside \(temperature)º.")
-// }
-
-
-
-
-
-
-
-
+print(currentWeatherData.description())
+print("Время суток: \(currentWeatherData.timeOfDay)") // Доступ к вычисляемому свойству
 
