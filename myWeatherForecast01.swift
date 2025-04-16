@@ -1,3 +1,5 @@
+import Foundation
+
 // hello world 2.04.25
 
 struct WeatherInfo {
@@ -30,6 +32,8 @@ enum WeatherCondition: String {
     
 }
 
+
+
 var currentWeatherData = WeatherInfo(
     temperature: 25,
     city: "New York",
@@ -37,6 +41,7 @@ var currentWeatherData = WeatherInfo(
     condition: .sunny,
     humidity: 70.0,
     windSpeed: 4.0)
+
 
 // test
 print(currentWeatherData.description())
